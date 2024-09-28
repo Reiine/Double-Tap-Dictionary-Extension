@@ -29,21 +29,20 @@ async function fetchDefinition(word) {
 }
 
 // Function to create the popup that displays the definition
+// Use of iframe to override the css of other websites that may affect the css of this content
 function createDefinitionPopup(data) {
-    // Create an iframe for isolation
-    let iframe = document.createElement("iframe");
+
+  let iframe = document.createElement("iframe");
     iframe.style.position = "absolute";
-    iframe.style.zIndex = zIndex; // Ensure it's above other content
-    iframe.style.overflow = "hidden"; // Hide any potential scrollbars
+    iframe.style.zIndex = zIndex; 
+    iframe.style.overflow = "hidden";
     document.body.appendChild(iframe);
 
-    // Set the position of the iframe near the selected word
     let range = window.getSelection().getRangeAt(0);
     let rect = range.getBoundingClientRect();
     iframe.style.left = `${rect.left + window.scrollX}px`;
     iframe.style.top = `${rect.top + window.scrollY - 60}px`;
 
-    // Get iframe's document and write the content
     let doc = iframe.contentDocument || iframe.contentWindow.document;
     doc.open();
     doc.write(`
@@ -118,27 +117,25 @@ function createDefinitionPopup(data) {
     `);
     doc.close();
 
-    // Adjust the iframe height based on content
     iframe.style.height = `${doc.body.scrollHeight}px`;
     iframe.style.width = `${doc.body.scrollWidth}px`;
 
     currentPopup = iframe;
 
-    // Close the popup when clicking outside
     document.addEventListener("click", handleOutsideClick);
 }
 
 // Function to show an error message if a definition is not found
 function createErrorPopup(message) {
-    // Reuse the iframe approach for consistency
-    let iframe = document.createElement("iframe");
+
+  let iframe = document.createElement("iframe");
     iframe.style.position = "absolute";
     iframe.style.left = "50%";
     iframe.style.top = "50%";
     iframe.style.transform = "translate(-50%, -50%)";
     iframe.style.border = "none";
     iframe.style.zIndex = "1000";
-    iframe.style.overflow = "hidden"; // Hide any potential scrollbars
+    iframe.style.overflow = "hidden"; 
     document.body.appendChild(iframe);
 
     let doc = iframe.contentDocument || iframe.contentWindow.document;
@@ -168,7 +165,7 @@ function createErrorPopup(message) {
     `);
     doc.close();
 
-    // Adjust the iframe height based on content
+
     iframe.style.height = `${doc.body.scrollHeight}px`;
     iframe.style.width = `${doc.body.scrollWidth}px`;
 
