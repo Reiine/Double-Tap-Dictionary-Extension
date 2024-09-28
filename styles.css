@@ -1,53 +1,53 @@
 /* Use of specific css so that my css doesn't clash with the website's css */
 
 .my-dictionary-body{
-    background-color: dodgerblue !important;
+    background-color: dodgerblue ;
 }
 
-.my-dictionary-body .my-dictionary-popup-container{
-    height: 20rem !important;
-    width: 20rem !important;
+.my-dictionary-popup-container{
+    height: 20rem ;
+    width: 20rem ;
 }
-.my-dictionary-body  .my-dictionary-title{
-    text-align: center !important;
-    color: whitesmoke !important;
+.my-dictionary-title{
+    text-align: center ;
+    color: whitesmoke ;
 }
-.my-dictionary-body  .my-dictionary-how-to{
-    margin-left: 1rem !important;
-    color: whitesmoke !important;
+.my-dictionary-how-to{
+    margin-left: 1rem ;
+    color: whitesmoke ;
 }
-.my-dictionary-body  .my-dictionary-des{
-    margin-left: 1rem !important;
-    color: whitesmoke !important;
-    text-align: justify !important;
-    width: 85% !important;
+.my-dictionary-des{
+    margin-left: 1rem ;
+    color: whitesmoke ;
+    text-align: justify ;
+    width: 85% ;
 }
 
-.my-dictionary-body  .my-dictionary-word{
-    font-size: 1rem !important;
-    display: inline-flex !important;
-    color: #000 !important;
-    margin-top: 0 !important;
+.my-dictionary-word{
+    font-size: 1rem;
+    display: inline-flex ;
+    color: #000 ;
+    margin-top: 0 ;
 }
-.my-dictionary-body  .my-dictionary-pos{
-    font-size: 0.7rem !important;
-    color: #a9a9a9 !important;
-    margin-top: 0 !important;
-    font-weight: bold !important;
+.my-dictionary-pos{
+    font-size: 0.7rem ;
+    color: #a9a9a9 ;
+    margin-top: 0 ;
+    font-weight: bold ;
 }
-.my-dictionary-body  .my-dictionary-def{
-    font-size: 0.8rem !important;
-    color : #000 !important;
+.my-dictionary-def{
+    font-size: 0.8rem ;
+    color : #000 ;
 }
-.my-dictionary-body  .my-dictionary-audio{
-    border-radius: 0 !important;
-    color: #a9a9a9 !important;
-    height: 2rem !important;
-    width: 100% !important;
-    border: 1px solid #000 !important;
-    border-radius: 10px !important;
+.my-dictionary-audio{
+    border-radius: 0 ;
+    color: #a9a9a9 ;
+    height: 2rem ;
+    width: 100% ;
+    border: 1px solid #000 ;
+    border-radius: 10px ;
 }
-.my-dictionary-body  .my-dictionary-example{
-    font-size: 0.8rem !important;
-    color: #000 !important;
+.my-dictionary-example{
+    font-size: 0.8rem ;
+    color: #000 ;
 }
